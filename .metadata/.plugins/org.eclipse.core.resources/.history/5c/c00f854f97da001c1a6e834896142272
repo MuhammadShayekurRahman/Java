@@ -1,0 +1,16 @@
+package com.qa.exercises;
+
+public class Flowcharts {
+	
+	public void flowChartA(){
+	
+		int a = 100;
+	
+		while(a<200) {
+		a++;
+		}
+	 
+		System.out.println(a);
+	}
+	
+}

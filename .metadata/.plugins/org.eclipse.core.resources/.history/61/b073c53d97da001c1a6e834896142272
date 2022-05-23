@@ -39,10 +39,9 @@ public class Runner {
 		
 		// Flowcharts
 		
-		Flowcharts flowcharts = new Flowcharts();
-		flowcharts.flowChartA();
-		flowcharts.flowChartB();
-		flowcharts.qThree();
+		
+		
+		
 		
 	}
 

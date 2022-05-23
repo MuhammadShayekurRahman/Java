@@ -41,8 +41,9 @@ public class Runner {
 		
 		Flowcharts flowcharts = new Flowcharts();
 		flowcharts.flowChartA();
-		flowcharts.flowChartB();
-		flowcharts.qThree();
+		System.out.println(flowcharts.flowChartA(a));
+		
+		
 		
 	}
 

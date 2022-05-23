@@ -16,11 +16,8 @@ public class Runner {
 		
 		// Results
 		Results results = new Results();
-		double physics = 30;
-		double chemistry = 100;
-		double biology = 100;
-		results.display(physics, chemistry, biology);
-		results.examResults(physics, chemistry, biology);
+		results.display(30, 100, 100);
+		results.examResults(30, 100, 100);
 		
 		System.out.println("==========================================================================================");
 		
@@ -31,18 +28,8 @@ public class Runner {
 		
 		System.out.println("==========================================================================================");
 		
-		// FizzBuzz
 		FizzBuzz fizzBuzz = new FizzBuzz();
 		fizzBuzz.num(16);
-		
-		System.out.println("==========================================================================================");
-		
-		// Flowcharts
-		
-		Flowcharts flowcharts = new Flowcharts();
-		flowcharts.flowChartA();
-		flowcharts.flowChartB();
-		flowcharts.qThree();
 		
 	}
 
