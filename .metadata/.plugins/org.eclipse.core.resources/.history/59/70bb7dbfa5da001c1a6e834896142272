@@ -1,0 +1,83 @@
+package com.qa.exercises;
+
+public class Flowcharts {
+	
+	public void flowChartA(){
+	
+	
+		for(int a=100; a<200; a++) {
+		System.out.println(a);
+		
+		}
+	 
+	}	
+
+	public void flowChartB() {
+		
+		
+		for (int a=100; a<=200; a++) {
+			
+			if (a%2==0) {
+			System.out.println("-"+ a);
+			continue;
+			}
+			else {
+				System.out.println("*"+a);
+			}
+		 
+		
+		}
+		
+		System.out.println("Completed");	
+		
+	}
+	
+	public void qThree() {
+		
+		for (int a=1; a<=10; a++) {
+			
+			for(int b=1; b<=a; b++) {
+				System.out.println(a);
+			}
+			
+
+		}
+		
+	}
+	
+	public void coins(double money) {
+		
+		double pennies = money*100;
+		System.out.println(pennies);
+		
+		// Condition of loop pennies > 0
+		// if divisible by £20 then divide by 20, store answer rounded down and leave remainder
+		// minus answer
+		// carry on for £10
+		while (pennies>0) {
+			
+			double change = pennies;
+			
+			if (pennies>2000) {
+			
+				pennies-=2000;
+				System.out.println("£20");
+			}else if(pennies>1000) {
+				
+				
+			}else if(pennies>500) {
+				
+				
+			}else if(pennies>100) {
+				
+				
+			}else if(pennies>50) {
+				
+				
+			}
+		}
+		
+	}
+	
+	
+}

@@ -42,7 +42,8 @@ public class Runner {
 		Flowcharts flowcharts = new Flowcharts();
 		flowcharts.flowChartA();
 		flowcharts.flowChartB();
-		flowcharts.qThree();
+		flowcharts.qThree(); 
+		flowcharts.coins(34.42);
 		
 	}
 
