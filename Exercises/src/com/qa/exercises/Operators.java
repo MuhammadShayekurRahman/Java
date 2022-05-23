@@ -20,8 +20,13 @@ public class Operators {
 	}
 	// Division method
 	public void divide(double x, double y) {
-		double z = x % y;
+		
+		if (y!=0) {
+		double z = x / y;
 		System.out.println("The result of "+ x + " / " + y + " = " + z);
+		} else {
+			System.out.println("Error: Can not divide by 0");
+		}
 	}
 	
 	

@@ -5,21 +5,26 @@ public class Results {
 	public void examResults(double physics, double chemistry, double biology) {
 		double sumResults = physics + chemistry + biology;
 		double examPercent = sumResults*100/450;
-		System.out.println("You have a achived a score of " + examPercent + "%");
+		System.out.println("You have a achived a percentage of " + examPercent + "%");
 		
-		if (examPercent>70) {
-			System.out.println("First Class");
+		if (physics<40 || chemistry<40 || biology<40) {
+			
+			System.out.println("You have failed");
+			
+		} else {
+			if (examPercent>70) {
+				System.out.println("First Class");
+			}
+			else if (examPercent>50) {
+				System.out.println("Second Class");
+			}
+			else if (examPercent>40) {
+				System.out.println("Pass");
+			}
+			else {
+				System.out.println("Fail :(");
+			}
 		}
-		else if (examPercent>50) {
-			System.out.println("Second Class");
-		}
-		else if (examPercent>40) {
-			System.out.println("Pass");
-		}
-		else {
-			System.out.println("Fail :(");
-		}
-		
 		
 	}
 	
@@ -32,4 +37,6 @@ public class Results {
         System.out.println("Your total score is: " + sumResults);
         
 	}
+	
+
 }
