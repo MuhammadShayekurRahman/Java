@@ -65,16 +65,14 @@ public class Flowcharts {
 				pennies-=500;
 				System.out.println("£5");
 				
-			}else if(pennies>=200) {
-				pennies-=200;
-				System.out.println("£2");	
-					
-				
 			}else if(pennies>=100) {
 				pennies-=100;
 				System.out.println("£1");
 				
-
+			}else if(pennies>=200) {
+				pennies-=200;
+				System.out.println("£2");	
+				
 			}else if(pennies>=50) {
 				pennies-=50;
 				System.out.println("50p");
