@@ -25,6 +25,7 @@ public class Flowcharts {
 				System.out.println("*"+a);
 			}
 		 
+		
 		}
 		
 		System.out.println("Completed");	
