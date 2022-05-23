@@ -1,0 +1,37 @@
+package com.qa.exercises;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		
+		// Addition 
+		add(123.123, 500);
+		minus(5, 2);
+		multiply(5, 5);
+		divide(10, 5);
+	}
+
+	// Addition method
+	public static void add(double x, double y) {
+		double z = x + y;
+		System.out.println("The result of "+ x " + " + y + " = " + z);
+	}
+	
+	// Addition method
+	public static void minus(double x, double y) {
+		double z = x - y;
+		System.out.println(z);
+	}
+	// Addition method
+	public static void multiply(double x, double y) {
+		double z = x * y;
+		System.out.println(z);
+	}
+	// Addition method
+	public static void divide(double x, double y) {
+		double z = x % y;
+		System.out.println(z);
+	}
+	
+}

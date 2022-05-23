@@ -1,0 +1,15 @@
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		noReturn();
+		
+	}
+	
+	public static void noReturn() {
+		System.out.println("This works but no return type");
+	}
+	public String withReturn() {
+		return "This is working fine!";
+	}
+}

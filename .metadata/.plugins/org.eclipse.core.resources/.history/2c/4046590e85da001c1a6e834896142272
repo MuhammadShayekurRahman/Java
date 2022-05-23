@@ -1,0 +1,18 @@
+package com.qa.exercises;
+
+public class Results {
+	
+	public double studentResults(int physics, int chemistry, int biology) {
+		double sumResults = physics + chemistry + biology;
+		return sumResults;
+		
+	}
+	
+	public void display() {
+		System.out.println("Congratulations on finishing your exams!");
+        System.out.println("The results for your Phsyics exam is: ");
+        System.out.println("The results for your Chemistry exam is: ");
+        System.out.println("The results for your Biology exam is: ");
+        
+	}
+}

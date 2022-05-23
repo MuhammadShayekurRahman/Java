@@ -1,0 +1,21 @@
+package com.qa.exercises;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		
+		// Addition 
+		add(234.3334,3234322.23434);
+
+	}
+
+	// Addition method
+	public static void add(double x, double y) {
+		double z = x + y;
+		System.out.println(z);
+	}
+	
+	
+	
+}
