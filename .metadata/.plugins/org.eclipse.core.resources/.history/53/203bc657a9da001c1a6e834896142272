@@ -50,7 +50,9 @@ public class Flowcharts {
 		System.out.println(pennies);
 		
 		// Condition of loop pennies > 0
-		
+		// if divisible by £20 then divide by 20, store answer rounded down and leave remainder
+		// minus answer
+		// carry on for £10
 		while (pennies>0) {
 			
 			if (pennies>=2000) {
