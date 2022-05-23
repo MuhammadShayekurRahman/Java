@@ -47,7 +47,7 @@ public class Flowcharts {
 	public void coins(double money) {
 		
 		double pennies = money*100;
-		System.out.println("Total in pennies: " + pennies);
+		System.out.println(pennies);
 		
 		// Condition of loop pennies > 0
 		

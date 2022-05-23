@@ -45,9 +45,7 @@ public class Runner {
 		
 		flowcharts.qThree(); 
 		
-		System.out.println("==========================================================================================");
 		// Coins
-		// Enter Value in Pounds!
 		flowcharts.coins(34.42);
 		
 	}
