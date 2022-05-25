@@ -9,7 +9,7 @@ public class Details {
 	
 	// Default constructor
 	
-	public void Customer() {
+	public Details () {
 		
 	}
 	

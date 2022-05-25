@@ -1,5 +1,8 @@
 package com.qa.exercises;
 
+import java.util.Scanner;
+
+
 public class Runner {
 
 	public static void main(String[] args) {
@@ -16,9 +19,17 @@ public class Runner {
 		
 		// Results
 		Results results = new Results();
-		double physics = 30;
-		double chemistry = 100;
-		double biology = 100;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please Enter your Phsyics grade:");
+		double physics = scanner.nextDouble();
+		System.out.println("Please Enter your Chemistry grade;");
+		double chemistry = scanner.nextDouble();
+		System.out.println("Please Enter your Biology grade;");
+		double biology = scanner.nextDouble();
+		
+//		double physics = 30;
+//		double chemistry = 100;
+//		double biology = 100;
 		results.display(physics, chemistry, biology);
 		results.examResults(physics, chemistry, biology);
 		
@@ -48,7 +59,7 @@ public class Runner {
 		System.out.println("==========================================================================================");
 		// Coins
 		// Enter Value in Pounds!
-		flowcharts.coins(48);
+		flowcharts.coins(58.83);
 		
 	}
 

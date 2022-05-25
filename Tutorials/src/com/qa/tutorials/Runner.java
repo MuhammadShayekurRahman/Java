@@ -2,6 +2,9 @@ package com.qa.tutorials;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Runner {
@@ -101,11 +104,97 @@ public class Runner {
 //	default: System.out.println(day+": Not Correct day");
 //	}
 	
+		// Arrays 
+		
+//	String[] cars = {"BMW", "Mercedes", "Tesla"};
+//	System.out.println(cars[0]);
+//	
+//	String[] chocolate = new String[3];
+//	chocolate[0] = "Galaxy";
+//	chocolate[1] = "Cadbury";
+//	chocolate[2] = "Mars";
+//	
+//	for (int i=0; i<chocolate.length; i++) {
+//		System.out.println(chocolate[i]);
+//	}
 	
+		
+		// 2D Arrays
 	
+//	String[][] cars = new String [2][3];
+//	cars[0][0]= "BMW";
+//	cars[0][1]= "Lambo";
+//	cars[0][2]= "Ferrari";
+//	cars[1][0]= "Mercedes";
+//	cars[1][1]= "Toyota";
+//	cars[1][2]= "Nissan";
+//	
+//	for(int i=0; i<cars.length; i++) {
+//		System.out.println();
+//		for (int j=0; j<cars[i].length; j++) {
+//			System.out.println(cars[i][j]);
+//		}
+//	}
+
+		
+		// String functions
+		
+//	String name = "shayek";
+	// boolean result = name.equals("shayek");
+	// int result = name.length();
+	// char result = name.charAt(0);
+	// int result = name.indexOf("h"); // Finds position of letter
+	// boolean result = name.isEmpty();
+//	String result = name.toUpperCase();
+//	String result = name.toLowerCase();
+//	String result = name.trim(); // Removes empty space
+//	String result = name.replace("s", "z");
 	
-	
-}
+//	System.out.println(result);
 	
 
+		// Wrapper Class
+		// boolean = Boolean
+		// char = Character
+		// int = Integer
+		
+		//Integer x = 1;
+		
+		// ArrayLists
+		
+//		ArrayList<String> food = new ArrayList<String>();
+//		
+//		food.add("Pizza");
+//		food.add("Chicken");
+//		food.add("Hotdogs");
+//		
+//		food.set(0, "Sushi");
+//		food.remove(2);
+//		// food.clear();
+//		for (int i=0; i<food.size(); i++) {
+//			System.out.println(food.get(i));
+//		}
+//		
+		//Enhanced for loops
+		
+//		for (String string : food) {
+//		System.out.println(string);	
+//		}	
+		
+		ArrayList<Integer> num = new ArrayList<Integer>();
+		
+		for (int i=0; i<20; i++) {
+			num.add(i, i+1);
+		}
+		
+//		for (Integer nums : num) {
+//			System.out.println(nums);
+//		}
+		
+		
+			
+		
+		
 }
+}	
+
