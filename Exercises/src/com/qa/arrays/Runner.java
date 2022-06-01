@@ -39,6 +39,7 @@ ArrayList<Integer> num = new ArrayList<Integer>();
 				System.out.println(b);
 			}
 			}
+	
 		
 		StringManipulation str = new StringManipulation();
 		

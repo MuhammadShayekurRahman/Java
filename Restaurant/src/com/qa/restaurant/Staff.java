@@ -1,5 +1,7 @@
 package com.qa.restaurant;
 
+import java.util.Scanner;
+
 public class Staff {
 
 	private int id;
@@ -8,12 +10,14 @@ public class Staff {
 	private String role;
 	private double wage;
 	
+
+	
 	public Staff() {
 	}
 
 
 	public Staff(int id, String firstName, String lastName, String role, int wage) {
-		super();
+		
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -69,7 +73,27 @@ public class Staff {
 				+ wage + "]";
 	}
 	
-	
+	public void newStaff(int x) {
+		Scanner scanner = new Scanner(System.in);
+		setId(x);
+		System.out.println("Please enter details of new Staff");
+		
+		System.out.println("First Name:");
+		// scanner.next();
+		setFirstName(scanner.nextLine());
+		
+		System.out.println("Last Name:");
+		setLastName(scanner.nextLine());
+		System.out.println("Job Role:");
+		setRole(scanner.nextLine());
+		System.out.println("Wage:");
+		setWage(scanner.nextDouble());
+		scanner.nextLine();
+		
+		System.out.println("Staff [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", role=" + role + ", wage=£"
+				+ wage + "]");
+		
+	}
 	
 	
 }

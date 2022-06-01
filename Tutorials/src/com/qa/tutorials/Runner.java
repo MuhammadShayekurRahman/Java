@@ -88,21 +88,21 @@ public class Runner {
 		
 		
 		// Switches (Used instead of if statements 
-//	String day = "Mondayy";
-//	
-//	switch (day) {
-//	case "Monday": System.out.println("It is Monday");
-//	break;
-//	case "Tuesday": System.out.println("It is Tuesday");
-//	break;
-//	case "Wednesday": System.out.println("It is Wednesday");
-//	break;
-//	case "Thursday": System.out.println("It is Thursday");
-//	break;
-//	case "Friday": System.out.println("It is Friday");
-//	break;
-//	default: System.out.println(day+": Not Correct day");
-//	}
+	String day = "Mondayy";
+	
+	switch (day) {
+	case "Monday": System.out.println("It is Monday");
+	break;
+	case "Tuesday": System.out.println("It is Tuesday");
+	break;
+	case "Wednesday": System.out.println("It is Wednesday");
+	break;
+	case "Thursday": System.out.println("It is Thursday");
+	break;
+	case "Friday": System.out.println("It is Friday");
+	break;
+	default: System.out.println(day+": Not Correct day");
+	}
 	
 		// Arrays 
 		
@@ -181,12 +181,12 @@ public class Runner {
 //		System.out.println(string);	
 //		}	
 		
-		ArrayList<Integer> num = new ArrayList<Integer>();
-		
-		for (int i=0; i<20; i++) {
-			num.add(i, i+1);
-		}
-		
+//		ArrayList<Integer> num = new ArrayList<Integer>();
+//		
+//		for (int i=0; i<20; i++) {
+//			num.add(i, i+1);
+//		}
+//		
 //		for (Integer nums : num) {
 //			System.out.println(nums);
 //		}

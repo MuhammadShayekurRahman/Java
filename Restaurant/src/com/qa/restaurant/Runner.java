@@ -14,19 +14,17 @@ public class Runner {
 //		Staff staff1 = new Staff(1, "lil", "Durk", "Manager", 25000);
 //		System.out.println(staff1);
 		
-		System.out.println("Please enter details of new Staff");
-		staff.setId(1);
-		System.out.println("First Name:");
-		staff.setFirstName(scanner.nextLine());
-		System.out.println("Last Name:");
-		staff.setLastName(scanner.nextLine());
-		System.out.println("Job Role:");
-		staff.setRole(scanner.nextLine());
-		System.out.println("Wage:");
-		staff.setWage(scanner.nextDouble());
+		System.out.println("How many staff would you like to add:");
+		int q = scanner.nextInt();
 		
-		System.out.println(staff);
-		
+		if (q>0) {
+			for (int i=1;i<q+1;i++) {
+			
+				staff.newStaff(i);
+			}
+		}else {
+			System.out.println("Please Enter at least 1");
+		}
 		
 	}
 
