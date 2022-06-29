@@ -10,7 +10,9 @@ public class Runner {
 		var staffName = new LinkedList<String>();
 		 staffName.add("Muhammad");
 		 staffName.add("Messi");
-		 staffName.add("Rondaldo");
+		 staffName.add("Ronaldo");
+		 staffName.add("Billy G");
+		 staffName.remove("Muhammad");
 		 
 		 System.out.println(staffName);
 		 
