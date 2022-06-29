@@ -8,9 +8,9 @@ public class Runner {
 		
 		System.out.println(england.details());
 		
-		System.out.println(england.averageIncome(503*1000^3));
+		System.out.println("£"+england.averageIncome((long) 503000000000f));
 		
-		
+		System.out.println("Population density of London: " + england.populationDensity(1572)+"km2");
 
 	}
 
