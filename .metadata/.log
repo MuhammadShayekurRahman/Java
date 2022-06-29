@@ -8209,3 +8209,17 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2022-06-28 14:36:54.074
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-30 00:04:31.071
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-30 00:04:31.071
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-30 00:04:31.071
+!MESSAGE C:\Users\QA\Desktop\QAJava\Logging overlaps the location of another project: 'Logging'
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-30 00:12:14.765
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-30 00:12:14.765
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-30 00:12:14.765
+!MESSAGE C:\Users\QA\Desktop\QAJava\Logging overlaps the location of another project: 'Logging'
