@@ -31,17 +31,12 @@ public class PersonRunner {
 		
 		List<Person> result =
 		personList.stream()
-		.filter(str-> str.getName().equals("Lewis"))
+		.filter(str-> str.getName().equals("Ronaldo"))
 		.collect(Collectors.toList());
 		
 		System.out.println(result);
 		
-//		public void search (String name) {
-//			List<Person> result = 
-//			        personList.stream()
-//			           .filter(str-> )))
-//			System.out.println(result);
-//		}
+
 		
 	}
 	
