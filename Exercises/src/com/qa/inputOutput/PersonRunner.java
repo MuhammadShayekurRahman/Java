@@ -29,9 +29,11 @@ public class PersonRunner {
 		personList.stream()
 		.forEach(n->System.out.println(n));
 		
+		String search = "Ronaldo";
+		
 		List<Person> result =
 		personList.stream()
-		.filter(str-> str.getName().equals("Ronaldo"))
+		.filter(str-> str.getName().equals(search))
 		.collect(Collectors.toList());
 		
 		System.out.println(result);
