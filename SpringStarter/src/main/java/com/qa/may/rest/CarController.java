@@ -7,6 +7,8 @@ import java.util.stream.Stream;
 
 import javax.websocket.server.PathParam;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -31,27 +33,28 @@ public class CarController {
 	}
 	
 	@PostMapping("/createCar")
-	public Car create(@RequestBody Car newCar) {
+	public ResponseEntity<Car> create(@RequestBody Car newCar) {
 		System.out.println("Created new Car: " + newCar);
 		this.cars.add(newCar);
-		return this.cars.get(this.cars.size()-1);
+		Car created = this.cars.get(this.cars.size()-1);
+		return new ResponseEntity<Car>(created, HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/listAll")
-	public List<Car> getCars(){
-		return cars;
+	public ResponseEntity<List<Car>> getCars(){
+		return new ResponseEntity<List<Car>>(this.cars, HttpStatus.ACCEPTED);
 	}
 	
 	@GetMapping("/search/{id}")
-	public Car getCarId(@PathVariable("id") int id) {
-		return this.cars.get(id);
+	public ResponseEntity<Car> getCarId(@PathVariable("id") int id) {
+		return new ResponseEntity<Car>(this.cars.get(id), HttpStatus.ACCEPTED);
 		
 	}
 	
 	
 	
 	@PatchMapping("/updateCar/{id}")
-	public void update(@PathVariable int id, @PathParam("make") String make, @PathParam("model") String model, @PathParam("type") String type, @PathParam("electric") boolean electric) {
+	public ResponseEntity<Car> update(@PathVariable int id, @PathParam("make") String make, @PathParam("model") String model, @PathParam("type") String type, @PathParam("electric") boolean electric) {
 		System.out.println(id);
 		System.out.println(make);
 		System.out.println(model);
@@ -65,12 +68,15 @@ public class CarController {
 		toUpdate.setType(type);
 		toUpdate.setElectric(electric);
 		
+		return new ResponseEntity<Car>(toUpdate, HttpStatus.ACCEPTED);
+		
 	}
 	
 	@DeleteMapping("/removeCar/{id}")
-	public void delete(@PathVariable int id) {
+	public ResponseEntity<?> delete(@PathVariable int id) {
 		System.out.println("ID: " + id);
 		this.cars.remove(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
 }
