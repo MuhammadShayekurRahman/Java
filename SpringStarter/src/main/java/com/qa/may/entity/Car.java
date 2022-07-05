@@ -1,6 +1,7 @@
 package com.qa.may.entity;
 
 public class Car {
+	private int id;
 	private String make;
 	private String model;
 	private String type;
@@ -11,12 +12,24 @@ public class Car {
 		
 	}
 	
-	public Car(String make, String model, String type, boolean electric) {
+	public Car(int id, String make, String model, String type, boolean electric) {
 		super();
+		this.id = id;
 		this.make = make;
 		this.model = model;
 		this.type = type;
 		this.electric = electric;
+		
+	}
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getMake() {
@@ -53,8 +66,11 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car [make=" + make + ", model=" + model + ", type=" + type + ", electric=" + electric + "]";
+		return "Car [id=" + id + ", make=" + make + ", model=" + model + ", type=" + type + ", electric=" + electric
+				+ "]";
 	}
+
+
 	
 	
 	
