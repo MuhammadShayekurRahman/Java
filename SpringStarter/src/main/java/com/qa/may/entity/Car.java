@@ -1,10 +1,24 @@
 package com.qa.may.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Car {
-	private int id;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	@Column(nullable = false)
 	private String make;
 	private String model;
 	private String type;
+	
+	@Column(columnDefinition = "boolean default false")
 	private boolean electric;
 	
 	public Car() {
@@ -12,7 +26,7 @@ public class Car {
 		
 	}
 	
-	public Car(int id, String make, String model, String type, boolean electric) {
+	public Car(Integer id, String make, String model, String type, boolean electric) {
 		super();
 		this.id = id;
 		this.make = make;
@@ -24,11 +38,11 @@ public class Car {
 	
 	
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
