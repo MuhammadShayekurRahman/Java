@@ -2,6 +2,7 @@ package com.qa.may.rest;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -20,6 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.ResultMatcher;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.may.entity.Car;
 
@@ -55,6 +57,21 @@ public class CarControllerTest {
 		cars.add(new Car(1, "Audi", "A4", "Saloon", false));
 		String listCarsAsJSON = this.mapper.writeValueAsString(cars);
 		this.mvc.perform(get("/listAll")).andExpect(status().isOk()).andExpect(content().json(listCarsAsJSON));
+	}
+	
+	@Test
+	void testGetCarId() throws Exception{
+		Car searchCar = new Car (1, "Audi", "A4", "Saloon", false);
+		String searchCarAsJSON = this.mapper.writeValueAsString(searchCar);
+		this.mvc.perform(get("/search/1")).andExpect(status().isOk()).andExpect(content().json(searchCarAsJSON));
+	}
+	
+	@Test
+	void testUpdate() throws Exception {
+		Car updatedCar = new Car(1, "Audi", "A3", "Hatchback", false);
+		String updatedCarAsJSON = this.mapper.writeValueAsString(updatedCar);
+		this.mvc.perform(patch("/updateCar/1?make=Audi&model=A3&type=Hatchback&electric=false")).andExpect(status().isAccepted())
+		.andExpect(content().json(updatedCarAsJSON));
 	}
 	
 	@Test
