@@ -1,1 +1,1 @@
-insert into car (electric, make, model, `type`) values (false, 'audi', 'a4', 'saloon');
+insert into car (electric, make, model, `type`) values (false, 'Audi', 'A4', 'Saloon');

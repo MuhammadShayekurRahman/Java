@@ -1,9 +1,13 @@
 package com.qa.may.rest;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +47,14 @@ public class CarControllerTest {
 		ResultMatcher checkBody = content().json(createdCarAsJSON);
 
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test 
+	void testGetCars() throws Exception{
+		List<Car> cars = new ArrayList<>();
+		cars.add(new Car(1, "Audi", "A4", "Saloon", false));
+		String listCarsAsJSON = this.mapper.writeValueAsString(cars);
+		this.mvc.perform(get("/listAll")).andExpect(status().isOk()).andExpect(content().json(listCarsAsJSON));
 	}
 	
 	@Test
