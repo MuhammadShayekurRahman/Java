@@ -17,8 +17,6 @@ public class Car {
 	private String make;
 	private String model;
 	private String type;
-	
-	@Column(columnDefinition = "boolean default false")
 	private boolean electric;
 	
 	public Car() {
