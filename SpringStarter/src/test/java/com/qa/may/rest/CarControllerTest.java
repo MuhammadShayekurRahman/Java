@@ -1,5 +1,6 @@
 package com.qa.may.rest;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -9,16 +10,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.ResultMatcher;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.may.entity.Car;
 
 @SpringBootTest
 @AutoConfigureMockMvc
+@Sql(scripts = { "classpath:car-schema.sql",
+"classpath:car-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 public class CarControllerTest {
 
 	@Autowired
@@ -34,11 +38,21 @@ public class CarControllerTest {
 		RequestBuilder req = post("/createCar").content(testCarAsJSON).contentType(MediaType.APPLICATION_JSON);
 		
 		ResultMatcher checkStatus = status().isCreated();
-		Car createdCar = new Car(1, "BMW", "M3", "Saloon", false);
+		Car createdCar = new Car(2, "BMW", "M3", "Saloon", false);
 		String createdCarAsJSON = this.mapper.writeValueAsString(createdCar);
 		ResultMatcher checkBody = content().json(createdCarAsJSON);
 
 		this.mvc.perform(req).andExpect(checkStatus).andExpect(checkBody);
 	}
 	
+	@Test
+	void testDelete() throws Exception {
+		this.mvc.perform(delete("/removeCar/1")).andExpect(status().isNoContent());
+		
+	}
+	
+	
 }
+
+	
+	
